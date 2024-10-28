@@ -1,0 +1,82 @@
+.content {
+  h4 {
+    padding-top: 2rem;
+  }
+}
+
+.list {
+  background-color: #ffffff;
+
+  .card {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+    border: solid 1px rgb(195, 202, 195);
+    border-radius: 0.5rem;
+
+    .detalle {
+      position: relative;
+      align-items: flex-start;
+      padding: 0 2.8rem 0 0;
+
+      .btnDelete {
+        position: absolute;
+        top: 0;
+        right: 3.5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        background-color: #5252521b;
+        border-radius: 2rem;
+
+        svg {
+          margin: 1px;
+        }
+      }
+
+      .name {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.7rem;
+        color: rgb(8, 1, 137);
+        //  line-height: 1.8125rem;
+        //  font-family: Poppins, BlinkMacSystemFont, Roboto, sans-serif;
+      }
+      .price {
+        font-size: 1em;
+        color: #fd384f;
+        font-weight: 600;
+      }
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+
+      p {
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+    img {
+      
+      max-width: 6rem;     
+      max-height: 9rem; 
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 0.3fr));
+  }
+}
