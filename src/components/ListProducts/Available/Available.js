@@ -3,6 +3,9 @@ import { BASE_NAME } from "@/config/constants";
 import { useWhatsApp, useCart, useAuth } from "@/hooks";
 import Link from "next/link";
 import { toast } from "react-toastify";
+const scale = "c_scale,f_auto/";
+const upload = "image/upload/";
+import Image from "next/image";
 
 import {
   Button,
@@ -92,10 +95,22 @@ export function Available(props) {
     }
   };
 
+  console.log(product.productData.images);
+
   return (
     <div className={styles.list__product}>
       <Link href={`/${product.productData.slug}`}>
-        <CardImg alt="Card image cap" src={product.productData.image_alterna} />
+        <CardImg
+          alt="Imagen"
+          src={
+            product.productData.images
+              ? `${BASE_NAME}${upload}${scale}${
+                  product.productData.images.split(upload)[1]
+                }`
+              : product.productData.image_alterna
+          }
+        
+        />
       </Link>
 
       <h5>{product.productData.name_extend}</h5>
@@ -103,9 +118,7 @@ export function Available(props) {
         <div className={styles.price}>
           <h6>$ {format(product.productData.price1)}</h6>
 
-          {user && (        
-              <h6>Mayor $ {format(product.productData.price2)}</h6>       
-          )}
+          {user && <h6>Mayor $ {format(product.productData.price2)}</h6>}
         </div>
       </div>
       <Button
