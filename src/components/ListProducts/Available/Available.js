@@ -95,7 +95,6 @@ export function Available(props) {
     }
   };
 
-  console.log(product.productData.images);
 
   return (
     <div className={styles.list__product}>
@@ -116,8 +115,8 @@ export function Available(props) {
       <h5>{product.productData.name_extend}</h5>
       <div className={styles.product}>
         <div className={styles.price}>
-          <h6>$ {format(product.productData.price1)}</h6>
-          <h6>Por Mayor $ {format(product.productData.price2)}</h6>
+          <h6>UNIDAD: $ {format(product.productData.price1)}</h6>
+          <h6>POR MAYOR: $ {format(product.productData.price2)}</h6>
 
           {/* {user && <h6>Mayor $ {format(product.productData.price2)}</h6>} */}
         </div>

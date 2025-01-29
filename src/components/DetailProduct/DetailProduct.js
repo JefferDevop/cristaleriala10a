@@ -122,11 +122,11 @@ export function DetailProduct(props) {
                 </h5>
                 <div className={styles.price}>
                   {productData?.price1 > 1 && (
-                    <h5>$ {format(productData.price1)} </h5>
+                    <h5>UNIDAD: $ {format(productData.price1)} </h5>
                   )}
                   {productData?.price2 > 1 && (
                  
-                    <h5>POR MAYOR $ {format(productData.price2)}</h5>
+                    <h5>POR MAYOR: $ {format(productData.price2)}</h5>
                   )}
                 </div>
               </CardTitle>
@@ -191,8 +191,8 @@ export function DetailProduct(props) {
                       <div className={styles.name}>
                         <CardTitle>
                           <h5>{product.name_extend}</h5>
-                          <h6>$ {format(product.price1)}</h6>
-                          <h6>Por mayor $ {format(product.price2)}</h6>
+                          <h6>UNIDAD: $ {format(product.price1)}</h6>
+                          <h6>POR MAYOR: $ {format(product.price2)}</h6>
 
                         </CardTitle>
                       </div>
@@ -210,8 +210,8 @@ export function DetailProduct(props) {
                       <div className={styles.name}>
                         <CardTitle>
                           <h5>{product.name_extend}</h5>
-                          <h6>$. {format(product.price1)}</h6>
-                          <h6>Por mayor $ {format(product.price2)}</h6>
+                          <h6>UNIDAD: $ {format(product.price1)}</h6>
+                          <h6>POR MAYOR: $ {format(product.price2)}</h6>
                         </CardTitle>
                       </div>
                     </div>

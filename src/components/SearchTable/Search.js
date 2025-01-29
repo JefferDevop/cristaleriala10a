@@ -43,11 +43,11 @@ export function Search(props) {
                   <p>{product.name_extend}</p>
 
                   {product.price1 !== null && (
-                    <h6>$ {format(product.price1)}</h6>
+                    <h6>UNIDAD: $ {format(product.price1)}</h6>
                   )}
                   {product.price2 !== null && (
                     
-                    <h6>Por Mayor$ {format(product.price2)}</h6>
+                    <h6>POR MAYOR: $ {format(product.price2)}</h6>
                   )}
 
                   {/* <h5>Disponible: {product.qty}</h5> */}
