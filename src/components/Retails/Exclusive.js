@@ -36,6 +36,8 @@ export function Exclusive(props) {
                       <CardTitle className={styles.title}>
                         {product.name} {product.name_extend}
                         <h6>$  {format(product.price1)}</h6>
+                        <h6>Por mayor $  {format(product.price2)}</h6>
+
                       </CardTitle>
                     </div>
                   </Link>
@@ -50,6 +52,8 @@ export function Exclusive(props) {
                       <CardTitle className={styles.title}>                     
                           {product.name} {product.name_extend}               
                         <h6>$ {format(product.price1)}</h6>
+                        <h6>Por mayor $  {format(product.price2)}</h6>
+
                       </CardTitle>
                     </div>
                   </Link>

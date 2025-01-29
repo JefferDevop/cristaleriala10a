@@ -117,8 +117,9 @@ export function Available(props) {
       <div className={styles.product}>
         <div className={styles.price}>
           <h6>$ {format(product.productData.price1)}</h6>
+          <h6>Por Mayor $ {format(product.productData.price2)}</h6>
 
-          {user && <h6>Mayor $ {format(product.productData.price2)}</h6>}
+          {/* {user && <h6>Mayor $ {format(product.productData.price2)}</h6>} */}
         </div>
       </div>
       <Button

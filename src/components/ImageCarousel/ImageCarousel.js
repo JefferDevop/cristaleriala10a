@@ -14,7 +14,7 @@ export function ImageCarousel(props) {
   
   
   
-
+  
   return (
     <Carousel  infiniteLoop={true} showThumbs={false} preventMovementUntilSwipeScrollTolerance={true}>
       {map(images, (image, index) => (
