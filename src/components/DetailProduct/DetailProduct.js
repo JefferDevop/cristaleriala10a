@@ -108,7 +108,6 @@ export function DetailProduct(props) {
     }
   };
 
-  console.log(productData);
 
   if (product) {
     return (
