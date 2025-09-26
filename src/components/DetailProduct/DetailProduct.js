@@ -109,6 +109,8 @@ export function DetailProduct(props) {
   };
 
 
+
+  
   if (product) {
     return (
       <>
