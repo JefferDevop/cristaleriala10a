@@ -36,7 +36,7 @@ export function Available(props) {
   const [propductAlternaWhatsApp, setPropductAlternaWhatsApp] = useState("");
 
   const format = (number) => {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    return number?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   };
 
   const toggleModal = () => {

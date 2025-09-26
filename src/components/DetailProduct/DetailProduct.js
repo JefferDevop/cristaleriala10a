@@ -108,14 +108,24 @@ export function DetailProduct(props) {
     }
   };
 
+  console.log(productData);
+
   if (product) {
     return (
       <>
         <div className={styles.detailProduct}>
           <div className={styles.product} id="seccion-1">
-          <ImageCarousel images={gallery} />
+            <ImageCarousel images={gallery} />
 
             <div className={styles.description}>
+
+              { gallery?.length < 1 && (
+                <CardImg
+                  alt="Card image cap"
+                  src={BASE_NAME + productData.images}
+                />
+              )}
+
               <CardTitle className={styles.title}>
                 <h5 className={styles.name_extend}>
                   {productData?.name_extend}
@@ -125,7 +135,6 @@ export function DetailProduct(props) {
                     <h5>UNIDAD: $ {format(productData.price1)} </h5>
                   )}
                   {productData?.price2 > 1 && (
-                 
                     <h5>POR MAYOR: $ {format(productData.price2)}</h5>
                   )}
                 </div>
@@ -193,7 +202,6 @@ export function DetailProduct(props) {
                           <h5>{product.name_extend}</h5>
                           <h6>UNIDAD: $ {format(product.price1)}</h6>
                           <h6>POR MAYOR: $ {format(product.price2)}</h6>
-
                         </CardTitle>
                       </div>
                     </div>
