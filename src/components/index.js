@@ -1,5 +1,6 @@
 export * from "./Footer";
 export * from "./Layout";
+ export * from "./ListSuperCategories";
  export * from "./ListCategories";
  export * from "./ListProducts";
  export * from "./DetailProduct";

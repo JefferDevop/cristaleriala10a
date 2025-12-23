@@ -6,18 +6,21 @@ import Link from "next/link";
 import styles from "./ListCategories.module.scss";
 
 export function ListCategories(props) {
-  const { categories } = props;
+  const { superCategory } = props;
+
+  if (!superCategory || !superCategory.categories) return null;
 
   return (
     <div className={styles.content}>
-      <h4>CATEGORÍAS</h4>
+      <h4>{superCategory.name}</h4>
+
       <div className={styles.list}>
-        {map(categories, (category) => (
+        {map(superCategory.categories, (category) => (
           <div key={category.id} className={styles.card}>
             {category.image ? (
               <Link href={`/products/${category.slug}`}>
                 <CardImg
-                  alt="Card image cap"
+                  alt={category.name}
                   src={BASE_NAME + category.image}
                 />
                 <div className={styles.category}>
@@ -29,8 +32,10 @@ export function ListCategories(props) {
               </Link>
             ) : (
               <Link href={`/products/${category.slug}`}>
-                <CardImg alt="Card image cap" src={category.image_alterna} />
-
+                <CardImg
+                  alt={category.name}
+                  src={category.image_alterna}
+                />
                 <div className={styles.category}>
                   <CardTitle className={styles.title}>
                     <h2>{category.name}</h2>
