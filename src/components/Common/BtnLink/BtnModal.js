@@ -26,7 +26,7 @@ export function BtnModal() {
   };
 
   function handleClickAdmin() {
-    router.push("https://cristaleriala10.conexion.bar/admin-dashboard/");
+    router.push("https://cristaleriala10.cosmoqa.store/admin-dashboard/");
   }
 
   function handleClickClient() {
